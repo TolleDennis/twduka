@@ -10,30 +10,46 @@
     <title>Duka</title>
 </head>
 <body>
-    <div class="custom-nav">
-        <div class="container d-flex px-2 align-items-center justify-content-between h-100">
-            <ul class="nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Women</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Men</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Kids</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link disabled">Others</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Accessories</a>
-                </li>
-            </ul>
-            <div class="float-right">
-                <span class="p-2"><i class="fa fa-lg fa-search"></i></span>
-                <span><i class="fa fa-lg fa-shopping-bag" aria-hidden="true"></i></span>
+    <div class="custom-nav shadow-sm">
+        <div class="container mx-auto row h-100 align-items-center">
+            <div class="col-2 col-md-7 col-lg-8 mx-auto">
+                <div class="bar-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                <div class="navigate">
+                    <ul class="nav">
+                        <li class="nav-item">
+                        <a class="nav-link links" aria-current="page" href="#">Women</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link links" href="#">Men</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link links" href="#">Kids</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link links" href="#">Others</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links" href="#">Accessories</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <div class="col-8  col-md-4 col-lg-3 mx-auto row align-items-center">
+                <span class="col-10 font-weight-bold shoe-shop-label">Shoe Shop</span>
+                <div class="col-2 col-sm-8  col-md-12 mx-auto search-component d-flex align-items-center justify-content-center">
+                    <input class="h-100 input-text w-md-90" type="text" placeholder="Search Items..."/>
+                    <i class="icon fa fa-lg fa-search mx-auto w-md-10"></i>
+                </div>
+            </div>
+            <div class="col-2 col-md-1 mx-auto"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
         </div>
     </div>
+
+    <script>
+        const btn = document.querySelector(".bar-icon");
+        btn.onclick = () => {
+            document.querySelector(".navigate").classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
